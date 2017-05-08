@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>RyanWizz</groupId>
-    <artifactId>JavaEEstarter</artifactId>
+    <artifactId>RyanWizz</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>Java EE starter</name>
+    <name>RyanWizz</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

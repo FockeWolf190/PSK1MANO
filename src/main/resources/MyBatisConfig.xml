@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="ryanwizz.usecases.mybatis.model.Plane" alias="Plane"/>
         <typeAlias type="ryanwizz.usecases.mybatis.model.Flight" alias="Flight"/>
         <typeAlias type="ryanwizz.usecases.mybatis.model.Passenger" alias="Passenger"/>
+        <typeAlias type="ryanwizz.usecases.mybatis.model.Plane" alias="Plane"/>
         <typeAlias type="ryanwizz.usecases.mybatis.model.FlightPassenger" alias="FlightPassenger"/>
     </typeAliases>
     <environments default="development">
@@ -19,19 +19,19 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mybatis/xml/PlaneMapper.xml"/>
-        <mapper resource="mybatis/xml/FlightMapper.xml"/>
         <mapper resource="mybatis/xml/PassengerMapper.xml"/>
+        <mapper resource="mybatis/xml/FlightMapper.xml"/>
         <mapper resource="mybatis/xml/FlightPassengerMapper.xml"/>
+        <mapper resource="mybatis/xml/PlaneMapper.xml"/>
     </mappers>
 </configuration>
 
 <!--<configuration>-->
 <!--<typeAliases>-->
-    <!--<typeAlias type="lt.vu.usecases.mybatis.model.Student" alias="Student"/>-->
-    <!--<typeAlias type="lt.vu.usecases.mybatis.model.Course" alias="Course"/>-->
-    <!--<typeAlias type="lt.vu.usecases.mybatis.model.University" alias="University"/>-->
-    <!--<typeAlias type="lt.vu.usecases.mybatis.model.StudentCourse" alias="StudentCourse"/>-->
+    <!--<typeAlias type="ryanwizz.usecases.mybatis.model.Student" alias="Student"/>-->
+    <!--<typeAlias type="ryanwizz.usecases.mybatis.model.Course" alias="Course"/>-->
+    <!--<typeAlias type="ryanwizz.usecases.mybatis.model.University" alias="University"/>-->
+    <!--<typeAlias type="ryanwizz.usecases.mybatis.model.StudentCourse" alias="StudentCourse"/>-->
 <!--</typeAliases>-->
 <!--<environments default="development">-->
     <!--<environment id="development">-->

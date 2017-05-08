@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <context id="RyanWizzDB" targetRuntime="MyBatis3Simple">
+    <context id="StudentsDB" targetRuntime="MyBatis3Simple">
         <jdbcConnection driverClass="org.h2.Driver"
                         connectionURL="jdbc:h2:~/h2database/StudentsDB;AUTO_SERVER=TRUE"
                         userId="sa"
@@ -16,7 +16,7 @@
                         <!--password="postgres">-->
         <!--</jdbcConnection>-->
 
-        <javaModelGenerator targetPackage="ryanwizz.mybatis.model" targetProject="MAVEN" />
+        <javaModelGenerator targetPackage="ryanwizz.usecases.mybatis.model" targetProject="MAVEN" />
 
         <!-- Anotacijų variantas - mažiau galimybių, bet paprastesnis -->
         <!--<javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="lt.vu.usecases.mybatis.dao" targetProject="MAVEN" />-->

@@ -23,7 +23,7 @@ public class MyBatisResources {
                     Resources.getResourceAsStream("MyBatisConfig.xml")
             );
         } catch (IOException e) {
-//            log.error("MyBatisResources.produceSqlSessionFactory(): ", e);
+            log.error("MyBatisResources.produceSqlSessionFactory(): ", e);
             throw new RuntimeException("MyBatisResources.produceSqlSessionFactory(): ", e);
         }
     }

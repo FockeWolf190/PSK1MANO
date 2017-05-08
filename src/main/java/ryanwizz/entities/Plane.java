@@ -42,8 +42,8 @@ public class Plane implements Serializable {
     @Column(name = "OPT_LOCK_VERSION")
     private Integer optLockVersion;
 
-    @OneToMany(mappedBy = "flight")
-    private List<Flight> studentList = new ArrayList<>();
+    @OneToMany(mappedBy = "plane")
+    private List<Flight> flightList = new ArrayList<>();
 
 
 }

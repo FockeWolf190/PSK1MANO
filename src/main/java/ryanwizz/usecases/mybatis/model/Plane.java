@@ -1,5 +1,7 @@
 package ryanwizz.usecases.mybatis.model;
 
+
+
 public class Plane {
     /**
      *
