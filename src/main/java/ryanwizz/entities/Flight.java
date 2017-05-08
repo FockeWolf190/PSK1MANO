@@ -16,13 +16,12 @@ import java.util.List;
         @NamedQuery(name = "Flight.findAll", query = "SELECT f FROM Flight f"),
         @NamedQuery(name = "Flight.findById", query = "SELECT f FROM Flight f WHERE f.id = :id"),
         @NamedQuery(name = "Flight.findByDepart", query = "SELECT f FROM Flight f WHERE f.depart LIKE :depart"),
-        @NamedQuery(name = "Flight.findByArrive", query = "SELECT f FROM Flight f WHERE f.arrive LIKE :arrive"),
-        @NamedQuery(name = "Flight.findByPlaneId", query = "SELECT f FROM Flight f WHERE f.planeId LIKE :planeId")
+        @NamedQuery(name = "Flight.findByArrive", query = "SELECT f FROM Flight f WHERE f.arrive LIKE :arrive")
 })
 @Getter
 @Setter
 //@EqualsAndHashCode(of = "registrationNo")
-@ToString(of = {"id", "depart", "arrive", "planeId"})
+@ToString(of = {"id", "depart", "arrive"})
 public class Flight implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,9 +38,6 @@ public class Flight implements Serializable {
     @Column(name = "ARRIVE")
     private String arrive;
 
-    @Column(name = "PLANE_ID ")
-    private String planeId;
-
     @Version
     @Column(name = "OPT_LOCK_VERSION")
     private Integer optLockVersion;
@@ -53,7 +49,7 @@ public class Flight implements Serializable {
     @ManyToMany
     private List<Passenger> passengerList = new ArrayList<>();
 
-    @JoinColumn(name = "Plane_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "PLANE_ID", referencedColumnName = "ID")
     @ManyToOne
     private Plane plane;
 

@@ -41,27 +41,27 @@
                 <td>
                     <h:panelGrid columns="3">
                         <p:outputLabel for="firstName" value="First name"/>
-                        <p:inputText id="firstName" value="#{requestUseCaseControllerJPA.passenger.firstName}"/>
+                        <p:inputText id="firstName" value="#{requestUseCaseControllerMyBatis.passenger.firstName}"/>
                         <p:message for="firstName"/>
 
                         <p:outputLabel for="lastName" value="Last name"/>
-                        <p:inputText id="lastName" value="#{requestUseCaseControllerJPA.passenger.lastName}"/>
+                        <p:inputText id="lastName" value="#{requestUseCaseControllerMyBatis.passenger.lastName}"/>
                         <p:message for="lastName"/>
 
                         <p:outputLabel for="country" value="Country"/>
-                        <p:inputText id="country" value="#{requestUseCaseControllerJPA.passenger.country}"/>
+                        <p:inputText id="country" value="#{requestUseCaseControllerMyBatis.passenger.country}"/>
                         <p:message for="country"/>
                     </h:panelGrid>
                 </td>
                 <td>
                     <h:panelGrid columns="3">
                         <p:outputLabel for="depart" value="Depart"/>
-                        <p:inputText id="depart" value="#{requestUseCaseControllerJPA.flight.depart}"/>
+                        <p:inputText id="depart" value="#{requestUseCaseControllerMyBatis.flight.depart}"/>
                         <p:message for="depart"/>
                     </h:panelGrid>
                     <h:panelGrid columns="3">
                         <p:outputLabel for="arrive" value="Arrive"/>
-                        <p:inputText id="arrive" value="#{requestUseCaseControllerJPA.flight.arrive}"/>
+                        <p:inputText id="arrive" value="#{requestUseCaseControllerMyBatis.flight.arrive}"/>
                         <p:message for="arrive"/>
                     </h:panelGrid>
                 </td>
@@ -69,7 +69,7 @@
         </table>
 
         <p:commandButton value="Create flight ans passenger"
-                         actionListener="#{requestUseCaseControllerJPA.createFlightPassenger}"
+                         actionListener="#{requestUseCaseControllerMyBatis.createFlightPassenger}"
                          ajax="false"/>
 
         <p:messages globalOnly="true"/>
