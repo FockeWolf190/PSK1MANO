@@ -6,7 +6,7 @@
 <generatorConfiguration>
     <context id="RyanWizzDB" targetRuntime="MyBatis3Simple">
         <jdbcConnection driverClass="org.h2.Driver"
-                        connectionURL="jdbc:h2:~/h2database/RyanWizzDB;AUTO_SERVER=TRUE"
+                        connectionURL="jdbc:h2:~/h2database/StudentsDB;AUTO_SERVER=TRUE"
                         userId="sa"
                         password="sa">
         </jdbcConnection>
@@ -16,14 +16,14 @@
                         <!--password="postgres">-->
         <!--</jdbcConnection>-->
 
-        <javaModelGenerator targetPackage="lt.vu.usecases.mybatis.model" targetProject="MAVEN" />
+        <javaModelGenerator targetPackage="ryanwizz.mybatis.model" targetProject="MAVEN" />
 
         <!-- Anotacijų variantas - mažiau galimybių, bet paprastesnis -->
         <!--<javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="lt.vu.usecases.mybatis.dao" targetProject="MAVEN" />-->
 
         <!-- XML variantas - daugiau galimybių -->
-        <sqlMapGenerator targetPackage="lt.vu.usecases.mybatis.xml" targetProject="MAVEN" />
-        <javaClientGenerator type="XMLMAPPER" targetPackage="lt.vu.usecases.mybatis.dao" targetProject="MAVEN" />
+        <sqlMapGenerator targetPackage="ryanwizz.usecases.mybatis.xml" targetProject="MAVEN" />
+        <javaClientGenerator type="XMLMAPPER" targetPackage="ryanwizz.usecases.mybatis.dao" targetProject="MAVEN" />
 
         <table schema="public" tableName="passenger">
             <generatedKey column="id" identity="true" sqlStatement="JDBC" />

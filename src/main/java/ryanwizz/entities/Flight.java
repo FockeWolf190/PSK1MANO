@@ -16,8 +16,8 @@ import java.util.List;
         @NamedQuery(name = "Flight.findAll", query = "SELECT f FROM Flight f"),
         @NamedQuery(name = "Flight.findById", query = "SELECT f FROM Flight f WHERE f.id = :id"),
         @NamedQuery(name = "Flight.findByDepart", query = "SELECT f FROM Flight f WHERE f.depart LIKE :depart"),
-        @NamedQuery(name = "Flight.findByArrive", query = "SELECT f FROM Flight f WHERE f.Arive LIKE :Arive"),
-        @NamedQuery(name = "Flight.findByPlaneId", query = "SELECT f FROM Flight f WHERE f.PlaneId LIKE :PlaneId")
+        @NamedQuery(name = "Flight.findByArrive", query = "SELECT f FROM Flight f WHERE f.arrive LIKE :arrive"),
+        @NamedQuery(name = "Flight.findByPlaneId", query = "SELECT f FROM Flight f WHERE f.planeId LIKE :planeId")
 })
 @Getter
 @Setter

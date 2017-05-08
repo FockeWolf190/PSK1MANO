@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+<h:head>
+    <h:outputStylesheet name="css/styles.css" />
+    <title>Request type usecase (DAO with MyBatis)</title>
+</h:head>
+
+<h:body>
+    <h1>Request type usecase example (DAO with MyBatis)</h1>
+    <h:form>
+        <p:fieldset legend="All flights" toggleable="true" style="width: 50%">
+            <p:dataTable value="#{requestUseCaseControllerMyBatis.getAllFlights()}" var="flight">
+                <p:column headerText="Flight">
+                    <h:outputText value="#{flight.depart} #{flight.arrive}" />
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+
+        <!--<h2>Create new flight and passenger</h2>-->
+        <!--<table>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<h:panelGrid columns="3">-->
+                        <!--<p:outputLabel for="firstName" value="First name"/>-->
+                        <!--<p:inputText id="firstName" value="#{requestUseCaseControllerMyBatis.passenger.firstName}"/>-->
+                        <!--<p:message for="firstName"/>-->
+
+                        <!--<p:outputLabel for="lastName" value="Last name"/>-->
+                        <!--<p:inputText id="lastName" value="#{requestUseCaseControllerMyBatis.passenger.lastName}"/>-->
+                        <!--<p:message for="lastName"/>-->
+
+                        <!--<p:outputLabel for="regnr" value="Country"/>-->
+                        <!--<p:inputText id="regnr" value="#{requestUseCaseControllerMyBatis.passenger.country}"/>-->
+                        <!--<p:message for="regnr"/>-->
+                    <!--</h:panelGrid>-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<h:panelGrid columns="3">-->
+                        <!--<p:outputLabel for="depart" value="Depart"/>-->
+                        <!--<p:inputText id="depart" value="#{requestUseCaseControllerMyBatis.flight.depart}"/>-->
+                        <!--<p:message for="depart"/>-->
+                    <!--</h:panelGrid>-->
+                    <!--<h:panelGrid columns="3">-->
+                        <!--<p:outputLabel for="arrive" value="Arrive"/>-->
+                        <!--<p:inputText id="arrive" value="#{requestUseCaseControllerMyBatis.flight.arrive}"/>-->
+                        <!--<p:message for="arrive"/>-->
+                    <!--</h:panelGrid>-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+
+        <!--<p:commandButton value="Create student and course"-->
+                         <!--actionListener="#{requestUseCaseControllerMyBatis.createFlightPassenger}"-->
+                         <!--ajax="false"/>-->
+
+        <!--<p:messages globalOnly="true"/>-->
+    </h:form>
+
+</h:body>
+</html>
+
