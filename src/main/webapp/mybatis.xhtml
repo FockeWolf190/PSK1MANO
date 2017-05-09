@@ -21,11 +21,6 @@
                 <p:column headerText="Arrive">
                     <h:outputText value="#{flight.arrive}" />
                 </p:column>
-                <p:column headerText="firstName">
-                    <ui:repeat var="passenger" value="#{flight.passengers}">
-                    <h:outputText value="#{passenger.firstName}" />
-                    </ui:repeat>
-                </p:column>
                 <p:column headerText="Country">
                     <ui:repeat var="passenger" value="#{flight.passengers}">
                     <h:outputText value="#{passenger.firstName} #{passenger.lastName} #{passenger.country}" />
